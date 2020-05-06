@@ -72,8 +72,8 @@ void gcode_write(float *joint_state){
   motor_pos[2] = joint_state[1];                       //
   motor_pos[3] = joint_state[2];                       //Art 3 - "elbow" pitch
   motor_pos[4] = joint_state[3];                       //Art 4 - roll
-  motor_pos[5] = 2 * joint_state[4] + joint_state[5];  //Art 5 - wrist pitch
-  motor_pos[6] = 2 * joint_state[4] - joint_state[5];  //Art 6 - wrist roll
+  motor_pos[5] = 2 * joint_state[4] - joint_state[5];  //Art 5 - wrist pitch
+  motor_pos[6] = 2 * joint_state[4] + joint_state[5];  //Art 6 - wrist roll
   motor_pos[7] = joint_state[6];                       //Gripper
 
   for ( int i = 0 ; i <= 7 ; i++ ) {
