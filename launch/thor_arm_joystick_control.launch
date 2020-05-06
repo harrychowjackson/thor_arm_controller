@@ -1,0 +1,13 @@
+<launch> 
+
+  <node pkg="joy" type="joy_node" name="joy_node">
+    <param name="dev" value="/dev/input/js0"/>
+    <param name="deadzone" value="0.2"/>
+    <param name="autorepeat_rate" value="5"/>
+    <param name="coalesce_interval" value="0.1"/>
+  </node>
+  
+  <node pkg="thor_arm_controller" type="thor_arm_controller_joystick" name="thor_arm_controller_joystick">
+  </node>  
+
+</launch>
